@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url('images/as48Bi45vRGDmXrK0jXp.webp');
+        }
+        .inp1{
+            outline:none;
+            width: 22em;
+            height: 2em;
+            border-radius: 4px;
+        }
+        .inp2{
+            outline:none;
+            width: 22em;
+            height: 2em;
+            border-radius: 4px;
+        }
+        .inp3{
+            outline:none;
+            width: 22em;
+            height: 2em;
+            border-radius: 4px;
+        }
+        .inp4{
+            outline:none;
+            width: 22em;
+            height: 2em;
+            border-radius: 4px;
+        }
+
+        .containner{
+            height:80vh;
+            width: 70vh;
+             background: rgb(226, 223, 223); 
+            margin-left: 400px;
+            border-top-left-radius:8em ;
+            border-top-right-radius:5em ;
+            border-bottom-right-radius:8em ;
+            box-shadow: 2em 2em 8em grey;
+            
+        }
+        .containner2{
+           text-align: center;
+        }
+        .btn{
+            margin-left: 140px;
+            height: 3vw;
+            width: 9vw;
+            background: green;
+            animation-name: boy;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+        @keyframes boy {
+                20%{
+                    background-color: blue;
+                }
+                40%{
+                    background-color: olivedrab;
+                }
+                60%{
+                    background-color: gold;
+                }
+                80%{
+                    background-color: orange;
+                }
+                100%{
+                    background-color: violet;
+                    transform: rotate(360deg);
+                }
+        }
+    </style>
+</head>
+<body><br><br><br><br>
+    <div class="containner"><br><br>
+        <div class="containner2">
+        <b><label for="hat" class="me">Enter your First Name:</label></b><br><br>
+        <input type="text" class="inp1" id="hat"><br><br>
+
+        <b><label for="hate" class="me">Enter your Last Name:</label></b><br><br>
+        <input type="text" class="inp2" id="hate"><br><br>
+
+        <b><label for="ha" class="me">Enter your password:</label></b><br><br>
+        <input type="password" class="inp3" id="ha"><br><br>
+
+        <b><label for="h" class="me">Confirm your password:</label></b><br><br>
+        <input type="password" class="inp4" id="h"><br><br>
+        </div>
+            <button class="btn">
+                    Submit
+            </button>
+    </div>
+        <script>
+                let inp1 = document.querySelector('.inp1');
+                let inp2 = document.querySelector('.inp2');
+                let inp3 = document.querySelector('.inp3');
+                let inp4 = document.querySelector('.inp4');
+
+                let btn = document.querySelector('.btn');
+                btn.onclick =() =>{
+                    localStorage.setItem("first Name",inp1.value);
+                    localStorage.setItem("last Name",inp2.value);
+                    localStorage.setItem("Password",inp3.value);
+                    localStorage.setItem("Confirm Password",inp4.value);
+                }
+        </script>
+</body>
+</html>

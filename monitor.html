@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .edit{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body><br><br>
+   <b> <span class="edit">User's first Name is : </span><span class="first"></span><br><br>
+    <span class="edit">User's Last Name is : </span><span class="last"></span><br><br>
+    <span class="edit">User's password is : </span><span class="passwor"></span><br><br>
+    <span class="edit">User's Confirm password is : </span><span class="con"></span><br><br></b>
+</body>
+    <script>
+        document.body.onload =()=>{
+            let f = document.querySelector('.first');
+            let l = document.querySelector('.last');
+            let p = document.querySelector('.passwor');
+            let c = document.querySelector('.con');
+
+            f.textContent = localStorage.getItem('first Name')
+            l.textContent = localStorage.getItem('last Name')
+            p.textContent = localStorage.getItem('Password')
+            c.textContent = localStorage.getItem('Confirm Password')
+                                    }
+    </script>
+</html>
